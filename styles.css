@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.content {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://www.topgadget.com.br/wp-content/uploads/2020/06/lifi.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.main-content {
+  width: 90%;
+  height: 95%;
+  border-radius: 0 0 50px 50px;
+  /* background-color: cornflowerblue; */
+  /* opacity: 0.2; */
+  backdrop-filter: blur(8px);
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+nav {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  padding-top: 70px;
+}
+ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+}
+
+.floating {
+  width: 300px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 200px;
+  background: rgb(108, 54, 196);
+  background: linear-gradient(
+    90deg,
+    rgba(108, 54, 196, 1) 0%,
+    rgba(98, 10, 213, 1) 52%,
+    rgba(34, 153, 177, 1) 100%
+  );
+  border-radius: 0 0 50px 50px;
+}
+
+.floating p {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 50px;
+  font-weight: bold;
+  font-size: 30px;
+}
+.floating img {
+  width: 90%;
+  height: min-content;
+  padding-bottom: 50px;
+}
+
+.home {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  width: 100%;
+  height: 90%;
+  color: white;
+}
+.title-home {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.home h1 {
+  align-self: center;
+  color: white;
+  font-size: 75px;
+}
+.title-home a {
+  background-color: blueviolet;
+  padding: 10px 20px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  max-width: 100px;
+}
+.images-home {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.home-description {
+  border-radius: 20px;
+  height: 225px;
+  background-color: blueviolet;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+.home img {
+  border-radius: 20px;
+  width: 250px;
+  height: 180px;
+}
