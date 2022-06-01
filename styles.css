@@ -20,15 +20,71 @@
   /* opacity: 0.2; */
   backdrop-filter: blur(8px);
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.7);
-  z-index: 1;
+  /* GRID */
+  display: grid;
+  gap: 10px;
+
+  /* Area position */
+  grid-template-areas: 
+      "header header"
+      "left right";
+ }
+  div.navbar {
+  grid-area: header;
+  }
+  div.info:first-of-type {
+      grid-area: left;
+  }
+  div.home:last-of-type {
+      grid-area: right;
+  }
+  @media (min-width: 1000px) {
+    .main-content {
+      grid-template-areas:
+        "header header"
+        "left right";
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.5fr 2.5fr;
+    }
+    .images-home {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
 }
-.navbar {
+@media (max-width: 1000px) {
+  .main-content {
+    width: auto;
+    grid-template-areas:
+      "header"
+      "left"
+      "right";
+
+      grid-template-columns: 0.5fr;
+      grid-template-rows: 0.5fr 1fr 0.5fr;
+  }
+  .images-home {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}
+div.navbar {
   display: flex;
-  justify-content: space-between;
-  z-index: 2;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+div.title-home {
+  display: flex;
+  align-items: flex-start;
+}
+div.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 nav {
-  position: absolute;
   right: 0;
   width: 50%;
   padding-top: 70px;
@@ -81,23 +137,22 @@ li a {
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
-  width: 100%;
-  height: 90%;
   color: white;
 }
 .title-home {
-  width: 30%;
-  height: 100%;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 20px;
+  padding: 10%;
 }
 
-.home h1 {
-  align-self: center;
+.title-home h1 {
+  align-self: flex-start;
   color: white;
   font-size: 75px;
+}
+.title-home h2 {
+  align-self: flex-start;
+  color: white;
 }
 .title-home a {
   background-color: blueviolet;
@@ -107,11 +162,6 @@ li a {
   color: white;
   text-align: center;
   max-width: 100px;
-}
-.images-home {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
 }
 .home-description {
   border-radius: 20px;
